@@ -16,7 +16,14 @@ picam2.configure("preview")
 picam2.start()
 
 # Load YOLOv11 model for bird detection
-model = YOLO("yolo11n_ncnn_model")
+# Load the YOLO11 model
+modelo = YOLO("yolo11n.pt")
+
+# Export the model to NCNN format
+modelo.export(format="ncnn")  # creates '/yolo11n_ncnn_model'
+
+# Load the exported NCNN model
+model = YOLO("./yolo11n_ncnn_model")
 OBJECT_CLASS = 14  # Class ID for birds in COCO dataset
 MIN_CONFIDENCE = 0.8  # Minimum confidence threshold
 
