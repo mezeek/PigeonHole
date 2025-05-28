@@ -25,7 +25,7 @@ modelo.export(format="ncnn")  # creates '/yolo11n_ncnn_model'
 # Load the exported NCNN model
 model = YOLO("./yolo11n_ncnn_model")
 OBJECT_CLASS = 14  # Class ID for birds in COCO dataset
-MIN_CONFIDENCE = 0.8  # Minimum confidence threshold
+MIN_CONFIDENCE = 0.9  # Minimum confidence threshold
 
 # Tracking control variables
 track = 0  # Default to training mode (0: off, 1: on)
