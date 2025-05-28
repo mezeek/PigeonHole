@@ -2,8 +2,6 @@ import cv2
 from picamera2 import Picamera2
 from ultralytics import YOLO
 import time
-from gpiozero.pins.pigpio import PiGPIOFactory 
-from gpiozero import AngularServo
 
 # Initialize camera with higher resolution
 picam2 = Picamera2()
